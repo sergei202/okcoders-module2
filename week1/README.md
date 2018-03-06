@@ -37,7 +37,7 @@ _Statements_ are basically actions.  Assigning variables are statements, loops a
 ```
 var a = 23;			// This is a statement.  We are creating a variable called 'a'
 a + 10;				// This is not a statement.  Nothing get changed.
-if(a>10) doThis();	// This is a statement.
+if(a>10) doThis();		// This is a statement.
 ```
 
 Note that both expressions and statements end with a semicolon.  This allows us to put more than one statement on a line:
@@ -46,7 +46,7 @@ Note that both expressions and statements end with a semicolon.  This allows us 
 Also note that comments start with `//`.
 
 ## Types
-Javscript has seven main types:
+Javascript has seven main types:
 - `Number` (0, 0.1, 22, etc)
 - `String` (anything that is text: `My name is Sergei`)
 - `Boolean` (`true` or `false`)
@@ -56,7 +56,7 @@ Javscript has seven main types:
 - `Function` (functions allow us to execute specific named chunks of code)
 
 ### `Number`
-`Number`s are exactly what they sound like: They store numeric values.  We can preform numeric operations on them:
+Numbers are exactly what they sound like: They store numeric values.  We can preform numeric operations on them:
 - `1 + 2`
 - `9 - 2`
 - `10 * 10`
@@ -97,7 +97,7 @@ Expressions can be turned into booleans by using logical operators:
 1 === 1;			// is 1 equal to 1?  Yes, so returns true.
 1 !== 0;			// is 1 NOT equal to 0?  Yes, so returns true.
 10 < 5;				// is 10 less than 5?  No, so returns false.
-!true				// we can use the exclamation mark as _not_.  This is read as 'bang true'.
+!true				// NOT true, so false.  This is read as 'bang true'.
 ```
 
 ## Chrome Console
@@ -115,11 +115,16 @@ We can run more complex multi-line expressions by using shift-enter:
 ```
 var a = 1;
 var b = 2;
-a + b;```
+a + b;
+```
 
 ### `console.log()`
+
 `console.log()` allows your code to output to the Chrome console.  This may seem like a strange thing at first, but it will become an invaluable debug tool.  Examples:
+
 ```
 console.log('A string');
 console.log(myVariable);
+console.log(myName, myAge);
+console.log('My name is %o, my age is %o.', myName, myAge);
 ```
