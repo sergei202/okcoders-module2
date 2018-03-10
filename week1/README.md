@@ -100,6 +100,33 @@ Expressions can be turned into booleans by using logical operators:
 !true				// NOT true, so false.  This is read as 'bang true'.
 ```
 
+## Typecasting
+Javascript is what is a called a _weak-typed_ language.
+That means a value can start off as one type and be used as a different type.
+
+Let's see an example of this:
+`'2' * '2'`.  Note that we are trying to multiply text, that doesn't make sense, so Javascript tries to convert the text into a number for us.
+
+Let's try another example: `'2' + '2'`.  Notice that now we get `'22'` instead of the expected `4`.  Why?
+Because Javascript saw two strings that were being concatenated together (remember that `+` is used for addition and concatenation).  What if we had a string and we wanted to force it into a number?
+
+Javascript has a few different ways to do it:
+```
+var numberString = '123';
+Number(numberString);			// use the Number constructor
++numberString;					// Force a positive sign to it
+1*numberString;					// Multiply it by 1
+parseInt(numberString);			// Use the built-in [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function
+```
+
+We can also force a number into a string a few different ways:
+```
+var number = 123;
+String(number);					// Use the String constructor
+number.toString();				// Use the Number's [toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) function
+number + '';					// Adding a string to a number will always return a string.
+```
+
 ## Chrome Console
 The Chrome Console is a great place to run Javascript.  We can access it multiple ways:
 - The Chrome Menu: `More tools` > `Developer Tools`
@@ -118,8 +145,8 @@ var b = 2;
 a + b;
 ```
 
-### `console.log()`
 
+### `console.log()`
 `console.log()` allows your code to output to the Chrome console.  This may seem like a strange thing at first, but it will become an invaluable debug tool.  Examples:
 
 ```
@@ -127,4 +154,17 @@ console.log('A string');
 console.log(myVariable);
 console.log(myName, myAge);
 console.log('My name is %o, my age is %o.', myName, myAge);
+```
+
+## `alert()` and `prompt()`
+We can use `alert()` to display a message to the user: `alert('Hi!')`
+
+`prompt()` allows us to ask the user for input: `prompt('Your name');`
+
+We can combine the two to create simple programs:
+```
+var firstName = prompt('What is your first name?');
+var lastName = prompt('What is your last name?');
+var fullName = firstName + ' ' + lastName;
+alert('Hello ' + fullName + '!');
 ```
