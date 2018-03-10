@@ -4,7 +4,7 @@
 
 If you are absolutely new to Javascript, please check out one (or more)
 of these sources before class to get a jump start:
-- [W3SChools](https://www.w3schools.com/js/default.asp)
+- [W3Schools](https://www.w3schools.com/js/default.asp)
 - [Code Academy - Intro to Javascript](https://www.codecademy.com/learn/introduction-to-javascript)
 - [Code School - Javascript Part 1](http://javascript-roadtrip.codeschool.com/levels/1/challenges/1)
 - [YouTube](https://youtu.be/fGdd9qNwQdQ) has some great intro videos on Javascript
@@ -36,8 +36,8 @@ a + b + (5 * 5);
 
 _Statements_ are basically actions.  Assigning variables are statements, loops and `if` blocks are as well:
 ```
-var a = 23;			// This is a statement.  We are creating a variable called 'a'
-a + 10;				// This is not a statement.  Nothing get changed.
+var a = 23;			// This is a statement.  We are creating a variable called 'a'.
+a + 10;				// This is not a statement.  It's an expression.
 if(a>10) doThis();		// This is a statement.
 ```
 
@@ -84,7 +84,7 @@ Strings can be _concatenated_  (joined together) with `+`:
 There are also [lots of `String` functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 
-## `Boolean`
+## [Booleans](https://www.w3schools.com/js/js_booleans.asp)
 Booleans are simply `true` or `false`: `var a=true; var b=false;`
 
 Expressions can be turned into booleans by using logical operators:
@@ -197,15 +197,15 @@ myObj.name = 'My Red Square';	// create a new property
 ## [Arrays](https://www.w3schools.com/js/js_arrays.asp)
 Arrays are ordered collections of unnamed values.  These are all arrays:
 ```
-var scores = [80,77,55];		// Note the square brackets
-['cat', 'dog', 'bird'];			// Arrays can contain any type
+var scores = [80,77,55];	// Note the square brackets
+['cat', 'dog', 'bird'];		// Arrays can contain any type
 [23, 'Nick', false, [1,2,3]]	// Arrays can contain all different values and even other arrays
 ```
 
 Arrays have a `length` property that tells you the size:
 ```
-[].length;				// 0
-[1].length;				// 1
+[].length;			// 0
+[1].length;			// 1
 [1,4,11,-22].length		// 4
 ```
 
@@ -214,9 +214,9 @@ We simply append the _index_ (or position) of the item we want in square backets
 
 ```
 var myArray = ['cat','dog','mouse','bird'];
-myArray[0];					// Access the first element.  Note that it is 0.
-myArray[2];					// Access the third element.
-myArray[88];				// undefined
+myArray[0];			// Access the first element.  Note that it is 0.
+myArray[2];			// Access the third element.
+myArray[88];			// undefined
 myArray[myArray.length-1];	// Access the last element
 ```
 We _push_ items on to an array and _pop_ them off:
@@ -224,8 +224,8 @@ We _push_ items on to an array and _pop_ them off:
 var list = [];			// Start with an empty array
 list.push(10);			// push 10 onto our array
 list.push(20);			// push 20 onto it
-list;					// view our array: [10,20]
-list.pop();				// returns the _last_ item on the array: 20
+list;				// view our array: [10,20]
+list.pop();			// returns the _last_ item on the array: 20
 ```
 
 ## [Functions](https://www.w3schools.com/js/js_functions.asp)
@@ -235,7 +235,7 @@ function sayHi() {				// define our function
 	console.log('Hi!');
 }
 
-sayHi();						// execute our function
+sayHi();					// execute our function
 ```
 
 Functions can have _arguments_ and _return_ values:
