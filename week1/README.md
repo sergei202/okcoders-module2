@@ -146,7 +146,6 @@ var b = 2;
 a + b;
 ```
 
-
 ### `console.log()`
 `console.log()` allows your code to output to the Chrome console.  This may seem like a strange thing at first, but it will become an invaluable debug tool.  Examples:
 
@@ -156,6 +155,9 @@ console.log(myVariable);
 console.log(myName, myAge);
 console.log('My name is %o, my age is %o.', myName, myAge);
 ```
+
+## jsbin.com
+[jsbin.com](https://jsbin.com) allows us to not only play around with Javascript but also to share it.  
 
 ## `alert()` and `prompt()`
 We can use `alert()` to display a message to the user: `alert('Hi!')`
