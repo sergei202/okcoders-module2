@@ -4,14 +4,15 @@
 
 If you are absolutely new to Javascript, please check out one (or more)
 of these sources before class to get a jump start:
+- [W3SChools](https://www.w3schools.com/js/default.asp)
 - [Code Academy - Intro to Javascript](https://www.codecademy.com/learn/introduction-to-javascript)
 - [Code School - Javascript Part 1](http://javascript-roadtrip.codeschool.com/levels/1/challenges/1)
 - [YouTube](https://youtu.be/fGdd9qNwQdQ) has some great intro videos on Javascript
 
 
-## Variables
+## [Variables](https://www.w3schools.com/js/js_variables.asp)
 Variables allow us to store values.  Variables can be created three different ways: `var`, `let`, `const`.
-We'll only use `var` for the first few weeks.
+`var` and `let` are _almost_ the same.  I'll use _var_ in class, but feel free to use _let_.
 
 Variable name can't have spaces and must start with a letter.  Variables use _camel case_:
 ```
@@ -55,7 +56,7 @@ Javascript has seven main types:
 - `Array` (a collection of other types: `['Sergei','Mark','Samantha']`)
 - `Function` (functions allow us to execute specific named chunks of code)
 
-### `Number`
+### [Numbers](https://www.w3schools.com/js/js_numbers.asp)
 Numbers are exactly what they sound like: They store numeric values.  We can preform numeric operations on them:
 - `1 + 2`
 - `9 - 2`
@@ -68,7 +69,7 @@ We can also use built-in `Math` functions:
 - [Lots of other `Math` functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 
-### `String`
+### [Strings](https://www.w3schools.com/js/js_strings.asp)
 Strings are anything that is text.  Javascript reads anything in single or double quotes as strings:
 ```
 'Hi there!'
@@ -100,7 +101,7 @@ Expressions can be turned into booleans by using logical operators:
 !true				// NOT true, so false.  This is read as 'bang true'.
 ```
 
-## Typecasting
+## [Typecasting](https://www.w3schools.com/js/js_datatypes.asp)
 Javascript is what is a called a _weak-typed_ language.
 That means a value can start off as one type and be used as a different type.
 
@@ -167,4 +168,80 @@ var firstName = prompt('What is your first name?');
 var lastName = prompt('What is your last name?');
 var fullName = firstName + ' ' + lastName;
 alert('Hello ' + fullName + '!');
+```
+
+## [Objects](https://www.w3schools.com/js/js_objects.asp)
+Objects are one of the most powerful features of Javascript.
+An object is a collection of values with names, called _properties_:
+```
+var myObj = {
+	color: 'red',
+	shape: 'square',
+	size: 5
+};
+```
+Note that objects are created with curly braces (`{}`) and note the comma between properties.
+We can access a property using _dot notation_:
+```
+myObj.color			// 'red'
+myObj.size			// 5
+myObj.blah			// undefined
+```
+
+We can change or create new properties the same way:
+```
+myObj.size = 6;
+myObj.name = 'My Red Square';	// create a new property
+```
+
+## [Arrays](https://www.w3schools.com/js/js_arrays.asp)
+Arrays are ordered collections of unnamed values.  These are all arrays:
+```
+var scores = [80,77,55];		// Note the square brackets
+['cat', 'dog', 'bird'];			// Arrays can contain any type
+[23, 'Nick', false, [1,2,3]]	// Arrays can contain all different values and even other arrays
+```
+
+Arrays have a `length` property that tells you the size:
+```
+[].length;				// 0
+[1].length;				// 1
+[1,4,11,-22].length		// 4
+```
+
+We can access the values inside an array by using _array notation_.
+We simply append the _index_ (or position) of the item we want in square backets to the array:
+
+```
+var myArray = ['cat','dog','mouse','bird'];
+myArray[0];					// Access the first element.  Note that it is 0.
+myArray[2];					// Access the third element.
+myArray[88];				// undefined
+myArray[myArray.length-1];	// Access the last element
+```
+We _push_ items on to an array and _pop_ them off:
+```
+var list = [];			// Start with an empty array
+list.push(10);			// push 10 onto our array
+list.push(20);			// push 20 onto it
+list;					// view our array: [10,20]
+list.pop();				// returns the _last_ item on the array: 20
+```
+
+## [Functions](https://www.w3schools.com/js/js_functions.asp)
+Functions are blocks of code that we can _execute_ or run:
+```
+function sayHi() {				// define our function
+	console.log('Hi!');
+}
+
+sayHi();						// execute our function
+```
+
+Functions can have _arguments_ and _return_ values:
+```
+function add(a,b) {				// Our function takes two arguments: a and b
+	return a + b;				// Our function returns the value of the expression a+b
+}
+var answer = add(42,42);
 ```
