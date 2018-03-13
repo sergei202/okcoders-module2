@@ -14,7 +14,11 @@ You will only need three pieces of software for this module:
 We'll spend the first week learning (or reviewing) what is Javascript and some of the basics:
 - Structure
 - Types
+- Arrays
+- Objects
+- Functions
 
 If Javascript is brand new to you, please read over the material before class.  Watch a few of the videos to get comfortable with the material.
 
-Click the Week 1 link above or [click here](week1/README.md).
+- [Week 1 - Overview](week1/README.md)
+- [Week 1 - Homework](week1/homework.md)

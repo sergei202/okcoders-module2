@@ -115,8 +115,8 @@ Javascript has a few different ways to do it:
 ```
 var numberString = '123';
 Number(numberString);			// use the Number constructor
-+numberString;					// Force a positive sign to it
-1*numberString;					// Multiply it by 1
++numberString;				// Force a positive sign to it
+1*numberString;				// Multiply it by 1
 parseInt(numberString);			// Use the built-in [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function
 ```
 
