@@ -9,11 +9,14 @@ Just hang in there and ask questions!  I'm available on Slack and in person for 
 
 
 ## Assignment 2 - Objects
-Create a function that take a name, gender, and age as arguments and return an object with those properties.
+Create a function that takes a name, gender, and age as arguments and return an object with those properties.
 
 #### Example usage
 - `createPerson('Sarah', 'F', 23)` returns `{name:'Sarah', gender:'F', age:23}`
 
+### Hints
+- Don't forget to `return` at the end!
+- `console.log()` is a great way to test your function
 
 
 ## Assignment 3 - Ifs and Boolean
@@ -39,4 +42,3 @@ Create a function called `sumArray` that takes an array as an argument and retur
 - This only needs to work for numbers
 - You will need a variable to store the total, I suggest calling it `total`
 - You will need to loop through the array and update the total
-- Don't forget to `return` the variable at the end!
