@@ -36,7 +36,7 @@ There are two different ways for us to do this:
 - DOM methods
 - jQuery
 
-### The Hard Way: DOM Methods
+### DOM Methods
 Every javascript program that runs in a web browser has access to the DOM using the `document` global object.  There a lots of methods on this object, but we'll focus on `getElementById(id)`.  The `id` argument is the `id` attribute of some HTML tag you want to get.  Let's see an [example](http://jsbin.com/buyirofuwo/edit?html,output):
 ```
 <html>
@@ -52,9 +52,12 @@ Every javascript program that runs in a web browser has access to the DOM using 
 
 There are dozens of [element properties and methods](https://www.w3schools.com/jsref/dom_obj_all.asp).
 
-#### DOM Events
+### DOM Events
 User actions (hover, click, keydown/keyup, etc) trigger _DOM events_.
 We attach _listeners_ to listen to DOM events.  Listeners trigger our Javascript functions.
+
+
+`element.addEventListener(type,listener)`.
 
 Let's see a quick [example](http://jsbin.com/sacifiloxu/edit?html,output):
 
@@ -62,14 +65,14 @@ Let's see a quick [example](http://jsbin.com/sacifiloxu/edit?html,output):
 <html>
 <body>
 	<div id="myDiv">Click me!</div>
+
 	<script>
 		var element = document.getElementById('myDiv');    // pass the same id as the <div> tag above has.
-		element.onclick = function() {                     // Attach a event listener
+
+		element.addEventListener('click', function() {     // Attach a click event listener
 			element.style.backgroundColor = 'red';         // set the background color to red
-		};
+		});
 	</script>
 </body>
 </html>
 ```
-
-We can also attach an event listener using `element.addEventListener(type,listener)`.
