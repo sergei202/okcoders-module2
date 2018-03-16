@@ -90,6 +90,8 @@ jQuery makes dealing with the DOM much easier.  But at a price: We need to inclu
 
 Once we include the script, we access jQuery using the `$` global object.  jQuery can also be accessed using the `jQuery` global object (both point to the same object), but `$` is shorter and preferred.
 
+jsbin makes it really easy: Click 'Add Library' and select 'jQuery 3.1.0'.
+
 ### jQuery `.css()`
 Let's see our `backgroundColor` example from the DOM Methods section using jQuery:
 ```
@@ -106,8 +108,8 @@ Let's see our `backgroundColor` example from the DOM Methods section using jQuer
 </html>
 ```
 A few important things to notice:
-- The `id` has a `#` (hash) in front of it.  This is because jQuery takes a `selector` (more on this)
-- Instead of using `.styles.backgroundColor`, we use the `.css()` method.
+- The `id` has a `#` (hash) in front of it.  This is because jQuery takes a `selector` (more on this later)
+- Instead of using `.styles.backgroundColor`, we use the `.css()` method
 
 Here is the [jsbin of this example](http://jsbin.com/soguvazotu/edit?html,js,output).
 
@@ -144,6 +146,8 @@ $('#myDiv').on('click', function() {
 });
 ```
 
+Here is a simple [counter example](http://jsbin.com/yabupuf/edit?html,js,output).
+
 ### jQuery Selectors
 jQuery selectors allow us to select one (or more) elements 3 different ways:
 - By id: `'#id'`
@@ -153,3 +157,25 @@ jQuery selectors allow us to select one (or more) elements 3 different ways:
 Here's an example of [by class](http://jsbin.com/pebusas/edit?html,js,output) and an example of [by tag name](http://jsbin.com/yeviboz/edit?html,js,output).
 
 Read more on selectors [here](https://www.tutorialspoint.com/jquery/jquery-selectors.htm).
+
+
+### Other jQuery Goodies
+
+#### jQuery Classes: `addClass()`, `removeClass()`, and `hasClass()`
+jQuery makes it very easy to add and remove classes:
+```
+$('li').addClass('done');             // Add the important class to all li elements
+$('.done').removeClass('done');       // Find all elements with .important and remove it
+```
+
+We can check if an element has a class using `hasClass()`:
+```
+$('mySelector').hasClass('done')
+```
+
+Here is a [simple shopping list example](http://jsbin.com/bunayad/edit?html,css,js,output) that uses all three methods.
+
+jQuery also has `toggleClass()` that does `addClass()`, `removeClass()`, and `hasClass()` for us: [Example jsbin](http://jsbin.com/kiqacix/edit?html,css,js,output)
+
+#### `.show()` and `.hide()`
+We can show and hide elements using the `.show()` and `.hide()` methods: [Example jsbin](http://jsbin.com/jerogod/edit?html,css,js,output).
