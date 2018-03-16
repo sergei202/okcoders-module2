@@ -10,13 +10,13 @@ We can run Javascript from a web page (a `.html` file) two ways:
 Let's see an example of the first:
 ```
 <html>
-	...
-	<script>
-		alert('Hi!');
-	</script>
-	<body>
-		...
-	</body>
+    ...
+    <script>
+        alert('Hi!');
+    </script>
+    <body>
+        ...
+    </body>
 </html>
 ```
 This method works great for small programs, and it keeps everything inside one file.  But when your code grows to more than 50 lines, it's time to give it it's own file.
@@ -41,11 +41,11 @@ Every javascript program that runs in a web browser has access to the DOM using 
 ```
 <html>
 <body>
-	<div id="myDiv">Hello from myDiv!</div>
-	<script>
-		var element = document.getElementById('myDiv');    // pass the same id as the <div> tag above has.
-		element.style.backgroundColor = 'red';             // set the background color to red
-	</script>
+    <div id="myDiv">Hello from myDiv!</div>
+    <script>
+        var element = document.getElementById('myDiv');    // pass the same id as the <div> tag above has.
+        element.style.backgroundColor = 'red';             // set the background color to red
+    </script>
 </body>
 </html>
 ```
@@ -64,15 +64,92 @@ Let's see a quick [example](http://jsbin.com/sacifiloxu/edit?html,output):
 ```
 <html>
 <body>
-	<div id="myDiv">Click me!</div>
+    <div id="myDiv">Click me!</div>
 
-	<script>
-		var element = document.getElementById('myDiv');    // pass the same id as the <div> tag above has.
+    <script>
+        var element = document.getElementById('myDiv');    // pass the same id as the <div> tag above has.
 
-		element.addEventListener('click', function() {     // Attach a click event listener
-			element.style.backgroundColor = 'red';         // set the background color to red
-		});
-	</script>
+        element.addEventListener('click', function() {     // Attach a click event listener
+            element.style.backgroundColor = 'blue';        // set the background color to red
+        });
+    </script>
 </body>
 </html>
 ```
+
+## jQuery
+jQuery makes dealing with the DOM much easier.  But at a price: We need to include the jQuery library using a `<script>` tag:
+
+```
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+</html>
+```
+
+Once we include the script, we access jQuery using the `$` global object.  jQuery can also be accessed using the `jQuery` global object (both point to the same object), but `$` is shorter and preferred.
+
+### jQuery `.css()`
+Let's see our `backgroundColor` example from the DOM Methods section using jQuery:
+```
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="myDiv">Hello from myDiv!</div>
+    <script>
+        $('#myDiv').css('backgroundColor', 'red');
+    </script>
+</body>
+</html>
+```
+A few important things to notice:
+- The `id` has a `#` (hash) in front of it.  This is because jQuery takes a `selector` (more on this)
+- Instead of using `.styles.backgroundColor`, we use the `.css()` method.
+
+Here is the [jsbin of this example](http://jsbin.com/soguvazotu/edit?html,js,output).
+
+Read more about it [here](https://www.tutorialspoint.com/jquery/jquery-css.htm).
+
+### jQuery event listeners and `.on()`
+We can add event listeners to elements using the `.on()` method:
+```
+$('#myDiv').on('click', myClickHandlerFunction);
+```
+
+Let's see our click example from earlier using jQuery:
+```
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="myDiv">Hello from myDiv!</div>
+    <script>
+        $('#myDiv').on('click', function() {
+            $('#myDiv').css('backgroundColor', 'blue');
+        });
+    </script>
+</body>
+</html>
+```
+Here's the [jsbin](http://jsbin.com/sajemey/edit?html,js,output) for you guys to play with.
+
+When we're inside an event handler, we can use `this` to refer to the element that the handler is attached to.  Our example above simply becomes:
+```
+$('#myDiv').on('click', function() {
+    $(this).css('backgroundColor', 'blue');
+});
+```
+
+### jQuery Selectors
+jQuery selectors allow us to select one (or more) elements 3 different ways:
+- By id: `'#id'`
+- By class: `'className'`
+- By tag name: `'p'`
+
+Here's an example of [by class](http://jsbin.com/pebusas/edit?html,js,output) and an example of [by tag name](http://jsbin.com/yeviboz/edit?html,js,output).
+
+Read more on selectors [here](https://www.tutorialspoint.com/jquery/jquery-selectors.htm).
