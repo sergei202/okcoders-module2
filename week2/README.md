@@ -159,9 +159,18 @@ Here's an example of [by class](http://jsbin.com/pebusas/edit?html,js,output) an
 Read more on selectors [here](https://www.tutorialspoint.com/jquery/jquery-selectors.htm).
 
 
+### Forms and Input fields
+
+jQuery makes working with `<input>` fields easy with the `.val()` method.
+
+Calling it without an argument will return the current value of the input.  Passing an argument will overwrite it.
+
+[Example jsbin](http://jsbin.com/miqerot/edit?html,js,output) and the [`.val()` documentation](http://api.jquery.com/val/).
+
+
 ### Other jQuery Goodies
 
-#### jQuery Classes: `addClass()`, `removeClass()`, and `hasClass()`
+#### Class helpers: `addClass()`, `removeClass()`, and `hasClass()`
 jQuery makes it very easy to add and remove classes:
 ```
 $('li').addClass('done');             // Add the important class to all li elements
