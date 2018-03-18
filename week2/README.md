@@ -12,7 +12,7 @@ We can run Javascript from a web page (a `.html` file) two ways:
 - We can link to a `.js` file with `<script>` tag using the `src` _attribute_
 
 Let's see an example of the first:
-```
+```html
 <html>
     ...
     <script>
@@ -26,7 +26,7 @@ Let's see an example of the first:
 This method works great for small programs, and it keeps everything inside one file.  But when your code grows to more than 50 lines, it's time to give it it's own file.
 
 We use the same script tag but point it to a file:
-```
+```html
 <script src="myFile.js"></script>
 ```
 
@@ -42,7 +42,7 @@ There are two different ways for us to do this:
 
 ### DOM Methods
 Every javascript program that runs in a web browser has access to the DOM using the `document` global object.  There a lots of methods on this object, but we'll focus on `getElementById(id)`.  The `id` argument is the `id` attribute of some HTML tag you want to get.  Let's see an [example](http://jsbin.com/buyirofuwo/edit?html,output):
-```
+```html
 <html>
 <body>
     <div id="myDiv">Hello from myDiv!</div>
@@ -65,7 +65,7 @@ We attach _listeners_ to listen to DOM events.  Listeners trigger our Javascript
 
 Let's see a quick [example](http://jsbin.com/sacifiloxu/edit?html,output):
 
-```
+```html
 <html>
 <body>
     <div id="myDiv">Click me!</div>
@@ -84,7 +84,7 @@ Let's see a quick [example](http://jsbin.com/sacifiloxu/edit?html,output):
 ## jQuery
 jQuery makes dealing with the DOM much easier.  But at a price: We need to include the jQuery library using a `<script>` tag:
 
-```
+```html
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -98,7 +98,7 @@ jsbin makes it really easy: Click 'Add Library' and select 'jQuery 3.1.0'.
 
 ### jQuery `.css()`
 Let's see our `backgroundColor` example from the DOM Methods section using jQuery:
-```
+```html
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -121,12 +121,12 @@ Read more about it [here](https://www.tutorialspoint.com/jquery/jquery-css.htm).
 
 ### jQuery event listeners and `.on()`
 We can add event listeners to elements using the `.on()` method:
-```
+```js
 $('#myDiv').on('click', myClickHandlerFunction);
 ```
 
 Let's see our click example from earlier using jQuery:
-```
+```html
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -144,7 +144,7 @@ Let's see our click example from earlier using jQuery:
 Here's the [jsbin](http://jsbin.com/sajemey/edit?html,js,output) for you guys to play with.
 
 When we're inside an event handler, we can use `this` to refer to the element that the handler is attached to.  Our example above simply becomes:
-```
+```js
 $('#myDiv').on('click', function() {
     $(this).css('backgroundColor', 'blue');
 });
@@ -176,13 +176,13 @@ Calling it without an argument will return the current value of the input.  Pass
 
 #### Class helpers: `addClass()`, `removeClass()`, and `hasClass()`
 jQuery makes it very easy to add and remove classes:
-```
+```js
 $('li').addClass('done');             // Add the important class to all li elements
 $('.done').removeClass('done');       // Find all elements with .important and remove it
 ```
 
 We can check if an element has a class using `hasClass()`:
-```
+```js
 $('mySelector').hasClass('done')
 ```
 
