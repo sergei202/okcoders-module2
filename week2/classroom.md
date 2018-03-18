@@ -1,0 +1,7 @@
+- sumArray for loop - http://jsbin.com/kanipez/edit?js,console
+- sumArray forEach - http://jsbin.com/sepusec/edit?js,console
+- jQuery lamp - http://jsbin.com/durokam/edit?js,output
+- jQuery forms/inputs - http://jsbin.com/nejigid/edit?html,js,output
+- Simple calculator - http://jsbin.com/loloniv/edit?html,js,output
+- Create `<li>` elements - http://jsbin.com/demedil/edit?html,js,output
+- Append an image - http://jsbin.com/movezov/edit?js,output

@@ -1,5 +1,9 @@
 # Week 2 - March 17th
 
+#### Quick Links
+- [Classroom Examples](classroom.md)
+- [Homework](homework.md)
+
 This week we we learn how to run Javascript inside of a web page and how to interact with it.
 
 ## Running Javascript from a Web page
