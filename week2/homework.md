@@ -35,3 +35,10 @@ You'll need a single `<div>` and a single button.
 - Don't forget to add the jQuery library!
 - What do we need when counting something? A variable!
 - Remember that we can use [`.text()`](https://www.w3schools.com/jquery/html_text.asp) to update the text inside of an element.
+
+## Day 3 - Monday the 19th
+
+Create a web page to count the number of votes for Item A and Item B.
+#### Hints
+- This is very similar to the click counter from yesterday.  But instead of one button and one `<div>`, you'll need two of each.
+- If we're counting/tracking two separate items, how many variables do we need?
