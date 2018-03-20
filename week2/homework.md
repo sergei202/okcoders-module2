@@ -15,7 +15,7 @@ Create a web page with a button that displays an alert box.
 - Remember how we created a click handler?
 
 ### Part 2
-Add a `<div>` tag with some text.  Now make the button to change the background color of the text (get rid of the alert from Part 1).
+Add a `<div>` tag with some text.  Now make the button change the background color of the text (get rid of the alert from Part 1).
 
 ##### Hints
 - Remember how we used the [`.css()`](http://api.jquery.com/css/) method in class?
@@ -42,3 +42,19 @@ Create a web page to count the number of votes for Item A and Item B.
 #### Hints
 - This is very similar to the click counter from yesterday.  But instead of one button and one `<div>`, you'll need two of each.
 - If we're counting/tracking two separate items, how many variables do we need?
+
+## Day 4 - Tuesday the 20th
+Create a web page that will take a number and add it to a running total.  You'll need:
+- One `<input>`, the user will enter their number here
+- One button, the user will press the button to add the entered number to the total
+- One `<div>` to display the running total
+
+Example:
+- The total should be zero when the page loads
+- If the user enters 25 and presses the button, the total becomes 25
+- If the user enters 10 and presses the button, the total increases to 35
+
+#### Hints
+- Don't forget that anytime we're summing/totaling something, we need a variable
+- You'll need to use `.val()` to get the value from the input field
+- Remember that `.val()` always returns a string, how do we cast it to a number?
