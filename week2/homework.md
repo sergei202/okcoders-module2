@@ -58,3 +58,17 @@ Example:
 - Don't forget that anytime we're summing/totaling something, we need a variable
 - You'll need to use `.val()` to get the value from the input field
 - Remember that `.val()` always returns a string, how do we cast it to a number?
+
+## Day 5 - Wednesday the 21st
+Today we'll make a very simple shopping list.  We'll build on to this example over the next few days.
+
+### Part 1
+You'll need an input field and an 'Add' button.  Once an item is added, it will appear inside an ordered list (`<ol>`).
+
+### Part 2
+After an item is added, clear out the input field.
+
+#### Hints
+- Remember that we can append elements to other elements with the [`.append()`](https://www.w3schools.com/jquery/html_append.asp) method
+- We can create new HTML elements using the [jQuery function](http://api.jquery.com/jQuery/#jQuery2): `$('<div>My Div</div')`
+- We did something very similar as a class example; don't use that code unless you really need to.  Challenge yourself to write it from scratch!
