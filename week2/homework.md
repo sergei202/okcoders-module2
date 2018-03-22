@@ -80,4 +80,4 @@ We'll add on to yesterday's assignment.
 Make each item in your list clickable, once clicked the item will be crossed out and grayed out.
 
 #### Hints
-`.toggleClass()` would be really useful here...
+Don't forget to add your `<li>` click handler AFTER you append the element!
