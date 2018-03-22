@@ -72,3 +72,12 @@ After an item is added, clear out the input field.
 - Remember that we can append elements to other elements with the [`.append()`](https://www.w3schools.com/jquery/html_append.asp) method
 - We can create new HTML elements using the [jQuery function](http://api.jquery.com/jQuery/#jQuery2): `$('<div>My Div</div')`
 - We did something very similar as a class example; don't use that code unless you really need to.  Challenge yourself to write it from scratch!
+
+
+## Day 6 - Thursday the 22nd
+We'll add on to yesterday's assignment.
+
+Make each item in your list clickable, once clicked the item will be crossed out and grayed out.
+
+#### Hints
+`.toggleClass()` would be really useful here...
