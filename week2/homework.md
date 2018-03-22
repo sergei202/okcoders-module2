@@ -70,7 +70,7 @@ After an item is added, clear out the input field.
 
 #### Hints
 - Remember that we can append elements to other elements with the [`.append()`](https://www.w3schools.com/jquery/html_append.asp) method
-- We can create new HTML elements using the [jQuery function](http://api.jquery.com/jQuery/#jQuery2): `$('<div>My Div</div')`
+- We can create new HTML elements using the [jQuery function](http://api.jquery.com/jQuery/#jQuery2): `$('<div>My Div</div>')`
 - We did something very similar as a class example; don't use that code unless you really need to.  Challenge yourself to write it from scratch!
 
 
