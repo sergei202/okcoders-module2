@@ -22,3 +22,9 @@ If Javascript is brand new to you, please read over the material before class.  
 
 - [Week 1 - Overview](week1/README.md)
 - [Week 1 - Homework](week1/homework.md)
+
+### [Week 2 - March 17th](week2/README.md)
+jQuery.
+
+### [Week 3 - March 24th](week3/README.md)
+NodeJS and Experss.
