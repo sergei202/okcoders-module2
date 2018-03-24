@@ -8,4 +8,4 @@
 ### Express
 - [express-hello-world.js - Express Hello World server](examples/express-hello-world.js)
 - [express-static - Express static server](examples/express-static/)
-- [express-ajax - Express ajax example](examples/express-ajax/)
+- [express-jquery-get - Express ajax example](examples/express-jquery-get/)

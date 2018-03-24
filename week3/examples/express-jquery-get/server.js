@@ -1,4 +1,4 @@
-// Express static example
+// Express and jQuery.get example
 // Don't forget to install express: npm install express
 
 // Import the express module.

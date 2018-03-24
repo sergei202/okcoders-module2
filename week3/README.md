@@ -133,6 +133,16 @@ app.use(express.static('public/'));
 Read more about [`express.static()`](https://expressjs.com/en/starter/static-files.html).  See the full example [here](examples/express-static).
 
 
+### jQuery `$.get()`
+[`$.get()`](https://api.jquery.com/jQuery.get/) allows us to make an HTTP GET requests to servers.  We can use this to trigger and get data from our express routes.
+
+```js
+$.get('/my-get-route', function(res) {               // // res will hold the server response
+    console.log('The server sent back: ' + res);
+});
+```
+
+See a full example [here](examples/express-jquery-get).
 
 ## Quick Links
 - [Examples](examples.md)
