@@ -6,3 +6,5 @@ We ended up reviewing Javascript and jQuery for this week.
 
 Please review the [homework from last week](../week2/homework.md).  Everyone had issues completing it.
 Go through each day until you've mastered it and can do it from scratch.
+
+Review the [classroom examples](classroom.md) we did as well.  Make sure you understand the code!
