@@ -87,12 +87,7 @@ Last day of homework for this week!  If you've been keeping up, great job!
 
 We'll continue to add on to the shopping list example from the last two days.
 
-#### Part 1
 Add a status line showing the total number of items and the number of items not done.
-
-#### Part 2
-Add a Delete button/icon next to each item.  That item will be deleted when pressed.
 
 #### Hints
 - Remember that `$()` has a `.length` property...
-- jQuery has a [`.remove()`](https://api.jquery.com/remove/) method that would be pretty handy here...
