@@ -44,7 +44,7 @@ Press `Ctrl`+`C` twice to exit Node.
 Node will run in interpreter mode, as we've seen above, if it's not given a filename.  But if we pass a filename, it will execute the Javascript inside and exit.
 
 Let's create a very simple program:
-```
+```js
 function sayHi(name) {
     console.log('Hello ' + name);
 }
@@ -60,6 +60,89 @@ Hello Fred
 Hello Mary
 ```
 
+## Arguments
+We can make our NodeJS program use command line arguments.
+
+Node has a special global variable called `process` that has a `argv` property.  `argv` is an array of the arguments.
+
+```js
+console.log(process.argv);
+```
+If we save/run the line above, and pass a few arguments:
+`node args.js cat dog bird`
+
+We should see something like:
+```
+[ '/usr/bin/node',
+  '/home/sergei/projects/okcoders/module2/week3/examples/args.js',
+  'cat',
+  'dog',
+  'bird'
+```
+
+Notice that `argv` also contains the node interpreter and a path to our file.
+
+See the [`args.js`](examples/args.js) and [`add.js`](examples/add.js) examples.
+
 ## NodeJS Reading
 - https://blog.codeship.com/node-js-tutorial/
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+
+
+## Web servers and Express
+NodeJS is usually used as a web server, [Express](https://expressjs.com/) makes that very easy.
+
+Express is a framework which allows us to turn our Node programs into a web server and handle routes.
+
+Read Express's [Hello World](https://expressjs.com/en/starter/hello-world.html) and
+[Basic Routing](https://expressjs.com/en/starter/basic-routing.html) first to make sure you understand the basics of Express.
+
+Let's see a very simple example:
+
+```js
+// Import the express module.
+var express = require('express');
+
+// Create an express app
+var app = express();
+
+// Add a GET request handler at root
+app.get('/', function(req,res) {
+	res.send('<h1>Hello World!</h1>');
+});
+
+// Tell our app to listen on port 8080
+app.listen(8080);
+
+// Tell the user we're ready to go
+console.log('Listening at http://localhost:8080');
+```
+
+Before running this code, you'll need to install express: `npm install express`
+
+Run the code and point a browser to http://localhost:8080
+
+We just created a web server in less than 10 lines of code!
+
+### `express.static()`
+We can have express serve files and directories for using `express.static()`:
+
+```js
+app.use(express.static('public/'));
+```
+Read more about [`express.static()`](https://expressjs.com/en/starter/static-files.html).  See the full example [here](examples/express-static).
+
+
+### jQuery `$.get()`
+[`$.get()`](https://api.jquery.com/jQuery.get/) allows us to make an HTTP GET requests to servers.  We can use this to trigger and get data from our express routes.
+
+```js
+$.get('/my-get-route', function(res) {               // // res will hold the server response
+    console.log('The server sent back: ' + res);
+});
+```
+
+See a full example [here](examples/express-jquery-get).
+
+## Quick Links
+- [Examples](examples.md)
