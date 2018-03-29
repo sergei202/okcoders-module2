@@ -53,3 +53,29 @@ Alternate between X and O when a cell is clicked.
 ### Hints
 - Don't over-think this, this assignment is much easier than yesterday's
 - Remember that inside of a click handler, `$(this)` is the element that was clicked
+
+
+## Day 4 - Thursday
+Today we'll make a web page that flips a coin when a button is pressed.
+
+### Part 1
+Create a web page with one button.  When pressed an alert box will say 'heads' or 'tails'.
+
+#### Hints
+- `Math.random()` returns a number between 0 and 1
+- How can we turn the random number above into `true` and `false`?
+- How can we turn `true`/`false` into 'heads' or 'tails?
+
+### Part 2
+Replace your alert box with an image of heads or tails.
+
+Here are some images:
+- [Heads](https://www.random.org/coins/faces/60-usd/0025c-nj/obverse.jpg)
+- [Tails](https://www.random.org/coins/faces/60-usd/0025c-nj/reverse.jpg)
+
+#### Hints
+- You _could_ use `.append()` and create an `<img>` tag each time...
+- ...or you could add the images in the markup and use `.show()` and `.hide()`
+
+## Extra Credit
+Add the coin flip result to an unordered list, that way you can see all the previous coin flips.
