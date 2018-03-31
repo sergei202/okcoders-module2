@@ -79,3 +79,7 @@ Here are some images:
 
 ## Extra Credit
 Add the coin flip result to an unordered list, that way you can see all the previous coin flips.
+
+
+## Day 5 - Friday
+Review the [Week 4 material](../week4/README.md).

@@ -27,4 +27,8 @@ If Javascript is brand new to you, please read over the material before class.  
 jQuery.
 
 ### [Week 3 - March 24th](week3/README.md)
-NodeJS and Experss.
+More jQuery and Javascript.
+
+
+### [Week 4 - March 31st](week4/README.md)
+NodeJS and Express.
