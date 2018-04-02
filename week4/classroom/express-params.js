@@ -9,6 +9,7 @@ app.listen(8080, function() {
 	console.log('Listening on http://localhost:8080');
 });
 
-app.get('/:x/:y', function(req,res) {
-	res.json(+req.params.x + +req.params.y);
+// Go to localhost:8080/echo/hi
+app.get('/echo/:text', function(req,res) {
+	res.json(req.params.text);
 });
