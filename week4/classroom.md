@@ -1,0 +1,3 @@
+- 10x10 table - http://jsbin.com/hacinar/edit?html,js,output
+- Tic-tac-toe - http://jsbin.com/hodicu/edit?html,js,output
+- Coin flip - http://jsbin.com/fivovuc/edit?js,output

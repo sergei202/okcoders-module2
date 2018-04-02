@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Shopping List</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+
+		<input>
+		<button>Add Item</button>
+		<br><br>
+
+		Items:<br>
+		<ul></ul>
+
+		<script>
+			getItems();
+
+			function getItems() {
+				$.get('/items', function(items) {
+					$('ul').empty();
+					items.forEach(function(item) {
+						var li = $('<li></li>').text(item);
+						$('ul').append(li);
+					});
+				});
+			}
+
+			$('button').on('click', function() {
+				var item = $('input').val();
+				$('input').val('');
+				$.get('/add/'+item);
+				getItems();
+			});
+		</script>
+	</body>
+</html>
